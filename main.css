@@ -1,3 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box:hover .logo{
+    background-image: linear-gradient(to left,#2b84ea,#add8e6);
+}
+
+.box1:hover .logo{
+    background-image: linear-gradient(to bottom,#2b84ea,purple);
+}
+
+path{
+    box-shadow: 0 0 40px 5px gray;
+}
+
+.box::after{
+    content: "";
+    background-image: url(Images/features-wave.svg);
+    background-size: cover;
+    position: absolute;
+    z-index: 200;
+    opacity: 0;
+    height: 23%;
+    width: 23%;
+    right: 0;
+    bottom: 8%;
+    transition: all 0.1s ease;
+}
+
+.box1::after{
+    background-image: url(Images/features2-wave.svg);
+}
+
+.box:hover:after{
+    opacity: 1;
+}
+
+
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
